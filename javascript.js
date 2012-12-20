@@ -1,5 +1,7 @@
 /* The following Javascript file serves as the style guide for we7 */
 
+//name your Javascript file with a camelCase name (.js), named after the primary object it returns, or primary function
+
 //immediately executing function expression
 //parenthesis around the function
 //no space between function and ()
@@ -32,8 +34,21 @@
         return 'hiya!';
       }
     },
+    //lower camelCase for variable names
     numValue = 42,
+    //start with a $ for jQuery objects
+    $document = $(document),
     except, like, these, size, options;
+
+  //use upper case and underscores for constants
+  var MAGIC_NUMBER = 3;
+
+  //if you need to create a constructor function, use a named function and start its name with a capital letter
+  function Mouse(length) {
+    this.wiskers = length;
+  }
+
+  var aMouse = new Mouse(3);
 
   //space after control statements and semicolons
   //space around operators
