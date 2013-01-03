@@ -148,6 +148,22 @@
       //result will be 'whoops'
     });
 
+  //passing a function to a function
+  withStuff(function() {
+    //anything
+  }, 'other', 'args');
+
+  //passing more than one function to a function - indent
+  withStuff(
+    function() {
+
+    },
+    'other', 'args', 'inline',
+    function() {
+
+    }
+  );
+
   //don't use setInterval - use setTimeout with a named function and reschedule if needed
   setTimeout(function check() {
     if (isReady()) {
