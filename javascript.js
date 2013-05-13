@@ -164,6 +164,12 @@
     }
   );
 
+  //watch out! array.splice() requires two arguments in IE
+  //this does nothing in IE, in other browsers it trims the array to the first element
+  array.splice(1);
+  //do this instead
+  array.splice(1, 1/0); //where 1/0 evaluates to Infinity
+
   //don't use setInterval - use setTimeout with a named function and reschedule if needed
   setTimeout(function check() {
     if (isReady()) {
@@ -208,6 +214,16 @@
 
   //boolean
   var bool = !!num;
+
+  //shortcuts - ideally UglifyJS would do these automatically
+  //Infinity
+  var inf = 1/0;
+
+  //-Infinity
+  var ninf = 1/-0;
+
+  //NaN - although not shorter, should gzip better
+  var notanumber = 0/0;
 
   //simple checks before doing something can be done with && (instead of if)
   object && fire(object);
