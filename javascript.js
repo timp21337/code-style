@@ -88,7 +88,7 @@
   //advanced stuff
 
   //functions can have private state
-  var hasPrivate = (function(){
+  var hasPrivate = (function() {
     var num = 0;
 
     return function(name) {
