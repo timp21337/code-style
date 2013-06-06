@@ -2,6 +2,7 @@
 
 ##### Style Examples and tips #####
 * Javascript Style Guide - [`javascript.js`](javascript.js)
+* CSS Stye Guide - [`css.css`](css.css)
 
 ##### Related Config Files #####
 

@@ -1,0 +1,125 @@
+/*
+  CSS file conventions
+  This files lists and demonstrates some of the conventions and formatting we generally try to follow at WE7/blinkboxmusic.com
+
+  **************
+
+  Aside from overall and base styling, which gets put in primary.css, or page specific styling, which get put in pages.css, most sections
+  of a page are split up into components and have their own style sheets, the filename prefixed with "cmpt-".  For example, a list of some of the current css files:
+
+      cmpt-dropdown.css
+      cmpt-pagination.css
+      cmpt-site-navbar.css
+      ...
+
+  Particularly large pages, that have a lot of their own styling, can be given their own css file too, prefixed with "page-".  For example:
+
+    page-ways-to-listen.css
+    page-static-comms.css
+    ...
+
+  This splitting of code particularly helps to avoid merge errors as a result of developers working on one file at the same time as each other.  It also helps with portability.
+
+  **************
+*/
+
+/* The beginning of each file should have a comment section, describing the component being styled. It can also be helpful to list original creation date, and the dates of any major edits and who did them. For example: */
+
+/*
+ *  Component Name
+ *  Notes: blah blah blah
+ *  03/06/2013 - File Created - PS
+ *  10/07/2013 - New Design change - DG
+ *
+ */
+
+/* Sub sections can be headed like this */
+
+
+
+/* We do not use id as selectors if we can avoid it */
+#mainMenu { /* NO! */
+}
+
+/*
+  Always create a new class instead.
+  **************
+  All classes are given a readable sensible name, in all lower case, with space represented by - (dash).
+  The opening curly bracket should follow the class declaration on the same line, not on the next line.
+
+  For example:
+  **************
+*/
+.primary-header {
+  /* Styling */
+}
+.search-results-nav {
+  /* Styling */
+}
+
+ /*  We also try to make styling "tag agnostic", so that styling can be applied to different sorts of tags.  For example, so a div can be given the same styling as an anchor */
+a.bttn {  /* NO! */
+}
+.bttn {   /* YES! */
+}
+
+
+
+/* Sections of styling should be separated by 3 blank lines as above */
+
+/*  All declarations should be multi-line, unless they are single item OVERRIDES */
+.player-bar .bttn {
+  color: #000;
+  font-size: 20px;
+}
+.player-bar .bttn:hover { color: #94130b; } /* Note the spacing here */
+
+
+
+/* Some properties we like to put on one line, to save space and to group similar properties */
+.player-bar .large-icon {
+  width: 80px; height: 90px;  /* Width and height to mimic common XY ordering */
+  position: absolute;
+  top: 10px; right: 10px;     /* Mimic margin/padding style ordering for this: TOP, RIGHT, BOTTOM, LEFT */
+}
+
+/* Grouping certain properties together, and placing sizing and position properties first can also help with readability */
+.player-bar .favourites-list .header {
+  display: block;               /* Size property */
+  width: 10px; height: 10px;    /* Size property */
+  position: absolute;           /* Position property */
+  top: 10px; left: 10px;        /* Position property */
+  background: #94130b;          /* Appearance Property */
+  color: #000;                  /* Appearance Property */
+  font-size: 20px;              /* Appearance Property */
+}
+
+
+
+/* We do not generally format the css for alignment but it some cases it can be useful for readability, for example, when having a lot of overrides */
+.player-bar .controls-block .control-button {
+  background: url(img/components/player-bar/player-bar-icons.png) 0 0 no-repeat;
+}
+.player-bar .controls-block .control-button.playing         {  background-position: 0 -45px;      }
+.player-bar .controls-block .control-button.playing:hover   {  background-position: 0 0;          }
+.player-bar .controls-block .control-button.paused          {  background-position: -135px -45px; }
+.player-bar .controls-block .control-button.paused:hover    {  background-position: -135px 0;     }
+.player-bar .controls-block .control-button.skip            {  background-position: -45px -45px;  }
+.player-bar .controls-block .control-button.skip:hover      {  background-position: -45px 0;      }
+.player-bar .controls-block .volume-button                  {  background-position: -90px -45px;  }
+.player-bar .controls-block .volume-button:hover            {  background-position: -90px 0;      }
+.player-bar .controls-block .volume-button.muted            {  background-position: -270px -45px; }
+.player-bar .controls-block .volume-button.muted:hover      {  background-position: -270px 0;     }
+.player-bar .controls-block .volume-button.fiftypc          {  background-position: -180px -45px; }
+.player-bar .controls-block .volume-button.fiftypc:hover    {  background-position: -180px 0;     }
+.player-bar .controls-block .volume-button.twentypc         {  background-position: -225px -45px; }
+.player-bar .controls-block .volume-button.twentypc:hover   {  background-position: -225px 0;     }
+
+
+
+/* If in doubt on formatting, it is best to go with what is most readable */
+
+
+
+
+
