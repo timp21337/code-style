@@ -2,6 +2,8 @@
   CSS file conventions
   This files lists and demonstrates some of the conventions and formatting we generally try to follow at WE7/blinkboxmusic.com
 
+  Unless there is a VERY good reason for it, all styling should be in a stylesheet seperate to the code, NOT in the html, NOT in the JS, not INLINE.
+
   **************
 
   Aside from overall and base styling, which gets put in primary.css, or page specific styling, which get put in pages.css, most sections
