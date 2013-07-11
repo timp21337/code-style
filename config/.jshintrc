@@ -1,7 +1,5 @@
 {
   "globals": {
-    "_": false,
-    "gimme": false
   },
   
   "browser": true,
