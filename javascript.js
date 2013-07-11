@@ -16,7 +16,6 @@
   //comment before the thing you are commenting on
 
   //single quote all strings, escaping where necessary
-  //exception for a string containing a single quote "'" is allowed
 
   //declare vars where it makes sense to do so, combining into one var statement
   //indent all variable names, on separate lines except for short unassigned at the end
