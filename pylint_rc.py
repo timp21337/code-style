@@ -34,7 +34,8 @@ load-plugins=
 # multiple time (only on the command line, not in the configuration file where
 # it should appear only once).
 #C0301: Line too long
-disable=C0301
+#C0103: Invalid name
+disable=C0301,C0103
 
 
 [REPORTS]
