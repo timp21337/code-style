@@ -33,8 +33,8 @@ load-plugins=
 # can either give multiple identifier separated by comma (,) or put this option
 # multiple time (only on the command line, not in the configuration file where
 # it should appear only once).
-
-#disable=
+#C0301: Line too long
+disable=C0301
 
 
 [REPORTS]
