@@ -3,6 +3,7 @@
 ##### Style Examples and tips #####
 * Javascript Style Guide - [`javascript.js`](javascript.js)
 * CSS Stye Guide - [`css.css`](css.css)
+* Pylint Style guide - [`pylint_rc.py`](pylint_rc.py
 
 ##### Related Config Files #####
 
