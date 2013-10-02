@@ -35,7 +35,8 @@ load-plugins=
 # it should appear only once).
 #C0301: Line too long
 #C0103: Invalid name
-disable=C0301,C0103
+#C0111: Missing docstring
+disable=C0301,C0103,C0111
 
 
 [REPORTS]
