@@ -36,7 +36,10 @@ load-plugins=
 #C0301: Line too long
 #C0103: Invalid name
 #C0111: Missing docstring
-disable=C0301,C0103,C0111
+#R0201: Method could be a function 
+#        Used when a method doesn’t use its bound instance, 
+#        and so could be written as a function.
+disable=C0301,C0103,C0111,R0201
 
 
 [REPORTS]
