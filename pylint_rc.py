@@ -33,10 +33,86 @@ load-plugins=
 # can either give multiple identifier separated by comma (,) or put this option
 # multiple time (only on the command line, not in the configuration file where
 # it should appear only once).
-#C0301: Line too long
-#C0103: Invalid name
-#C0111: Missing docstring
-disable=C0301,C0103,C0111
+
+# By general agreement we do not need these
+# C0301 Line too long
+# C0103 Invalid name
+# C0111 Missing docstring
+# R0201 Method could be a function 
+#         Used when a method doesn’t use its bound instance, 
+#         and so could be written as a function.
+# I0011 Warning locally suppressed using disable-msg
+
+
+# W0704 Except doesn't do anything 
+#         Used when an except clause does nothing but "pass" and there is no "else" clause
+# W0142 Used * or * magic* 
+#         Used when a function or method is called using *args or **kwargs to dispatch arguments.
+# W0232 Class has no __init__ method 
+#         Used when a class has no __init__ method, neither its parent classes.
+# W0702 No exception's type specified 
+#         Used when an except clause doesn't specify exceptions type to catch.
+# E1101 %s %r has no %r member 
+#         Used when a variable is accessed for an unexistent member.
+
+# E1120 No value passed for parameter %s in function call 
+#         Used when a function call passes too few arguments.
+#         Does not work with class based views
+# R0921 Abstract class not referenced 
+#         Used when an abstract class is not used as ancestor anywhere.
+# R0922 Abstract class is only referenced %s times 
+#         Used when an abstract class is used less than X times as ancestor.
+#         Is raised when abstract classes are used in different module
+# E1103 %s %r has no %r member (but some types could not be inferred) 
+#         Used when a variable is accessed for an unexistent member, 
+#         but astng was not able to interpret all possible types of this variable.
+# W0511 Used when a warning note as FIXME or XXX is detected.
+# W0703 Catching too general exception Exception
+# R0912 Too many branches (%s/%s) 
+#         Used when a function or method has too many branches, making it hard to follow.
+# R0913 Too many arguments (%s/%s) 
+#         Used when a function or method takes too many arguments.
+# W0613 Unused argument %r 
+#        Used when a function or method argument is not used.
+# R0801 Similar lines in %s files 
+#         Indicates that a set of similar lines has been detected 
+#         among multiple file. 
+# W0232 Class has no __init__ method 
+#         Used when a class has no __init__ method, neither its parent classes.
+# R0903 Too few public methods (%s/%s) 
+#         Used when class has too few public methods, so be sure it’s really worth it.
+# W0603 Using the global statement 
+#         Used when you use the “global” statement to update a global variable. 
+# R0902 Too many instance attributes (%s/%s) 
+#         Used when class has too many instance attributes
+# W0223 Method %r is abstract in class %r but is not overridden 
+#         Used when an abstract method (i.e. raise NotImplementedError) is not overridden in concrete class.
+# W0212 Access to a protected member %s of a client class 
+#         Used when a protected member (i.e. class member with a name beginning with an underscore) 
+#         is access outside the class or a descendant of the class where it’s defined.
+
+# R0911 Too many return statements (%s/%s) 
+#         Used when a function or method has too many return statement, making it hard to follow.
+# R0915 Too many statements (%s/%s) 
+#         Used when a function or method has too many statements. You should then split it in smaller functions / methods.
+# R0914 Too many local variables (%s/%s) 
+#         Used when a function or method has too many local variables.
+# E1305 Too many arguments for format string 
+#         Used when a format string that uses unnamed conversion specifiers is given too few arguments.
+# R0904 Too many public methods (%s/%s) 
+#         Used when class has too many public methods, try to reduce this to get a more simple (and so easier to use) class.
+
+# W0141 Used builtin function %r 
+#         Used when a black listed builtin function is used (see the bad-function option). 
+#         Usual black listed functions are the ones like map, or filter , where Python offers now some cleaner alternative like list comprehension.
+# W0102 Dangerous default value %s as argument 
+#         Used when a mutable value as list or dictionary is detected in a default value for an argument.
+
+# Agreed acceptable
+#disable=C0301,C0103,C0111,R0201
+
+# Currently required
+disable=C0301,C0103,C0111,R0201,E1103,I0011,W0511,W0703,R0912,R0913,W0613,R0801,W0232,R0903,W0603,R0902,W0223,W0212,R0911,R0915,R0914,E1305,R0904,W0141,W0102
 
 
 [REPORTS]
