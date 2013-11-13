@@ -111,15 +111,17 @@ load-plugins=
 # Checks new with pylint 1.0
 # C1001  Old-style-class
 #        for classes that do not have any base class.
-# W1401  Anomalous backslash in string
 # C0304  Final newline missing
 # C0303  Trailing whitespace
+# W1202  Specify string format arguments as logging function parameters
+# W1401  Anomalous backslash in string
+# R0924  Badly implemented Contaner
 
 # Agreed acceptable
 #disable=C0301,C0103,C0111,R0201
 
 # Currently required
-disable=C0301,C0103,C0111,R0201,E1103,I0011,W0511,W0703,R0912,R0913,W0613,R0801,W0232,R0903,W0603,R0902,W0223,W0212,R0911,R0915,R0914,E1305,R0904,W0141,W0102,C1001,W1401,C0303,C0304
+disable=C0301,C0103,C0111,R0201,E1103,I0011,W0511,W0703,R0912,R0913,W0613,R0801,W0232,R0903,W0603,R0902,W0223,W0212,R0911,R0915,R0914,E1305,R0904,W0141,W0102,C1001,C0303,C0304,W1202,W1401,R0924
 
 
 [REPORTS]
