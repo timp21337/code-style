@@ -108,11 +108,18 @@ load-plugins=
 # W0102 Dangerous default value %s as argument 
 #         Used when a mutable value as list or dictionary is detected in a default value for an argument.
 
+# Checks new with pylint 1.0
+# C1001  Old-style-class
+#        for classes that do not have any base class.
+# W1401  Anomalous backslash in string
+# C0304  Final newline missing
+# C0303  Trailing whitespace
+
 # Agreed acceptable
 #disable=C0301,C0103,C0111,R0201
 
 # Currently required
-disable=C0301,C0103,C0111,R0201,E1103,I0011,W0511,W0703,R0912,R0913,W0613,R0801,W0232,R0903,W0603,R0902,W0223,W0212,R0911,R0915,R0914,E1305,R0904,W0141,W0102
+disable=C0301,C0103,C0111,R0201,E1103,I0011,W0511,W0703,R0912,R0913,W0613,R0801,W0232,R0903,W0603,R0902,W0223,W0212,R0911,R0915,R0914,E1305,R0904,W0141,W0102,C1001
 
 
 [REPORTS]
